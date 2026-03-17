@@ -1210,9 +1210,9 @@ function escapeHtml(text) { return text.replace(/[&<>"']/g, m => ({ '&': '&amp;'
 
                     const aspectRatio = document.getElementById('xhs-paint-ratio').value;
                     const quality = document.getElementById('xhs-paint-quality').value;
-                    let size = "1024x1024";
-                    if (quality === "2K") size = "2048x2048";
-                    else if (quality === "4K") size = "4096x4096";
+                    let size = "1K";
+                    if (quality === "2K") size = "2K";
+                    else if (quality === "4K") size = "4K";
 
                     const useStreaming = document.getElementById('stream-toggle')?.checked || false;
 
@@ -1777,9 +1777,9 @@ function escapeHtml(text) { return text.replace(/[&<>"']/g, m => ({ '&': '&amp;'
                 });
                 messages.push(currentMessage);
 
-                let size = "1024x1024";
-                if (state.resolution === "2K") size = "2048x2048";
-                else if (state.resolution === "4K") size = "4096x4096";
+                let size = "1K";
+                if (state.resolution === "2K") size = "2K";
+                else if (state.resolution === "4K") size = "4K";
 
                 const payload = {
                     model: config.model,
